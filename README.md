@@ -24,7 +24,7 @@ npm run dev      # local preview at http://localhost:4321
 npm run build    # static site in dist/
 ```
 
-Every push to `main` publishes a preview to GitHub Pages (see `.github/workflows/deploy.yml`).
+Every push to `main` publishes a preview to GitHub Pages at https://davidallessie.github.io/dansblok/ (see `.github/workflows/deploy.yml`).
 
 ## Re-importing from WordPress
 
