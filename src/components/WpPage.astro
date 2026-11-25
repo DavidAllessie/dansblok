@@ -1,0 +1,18 @@
+---
+import { header, footer, withBase, type WpMeta } from '../lib/wp';
+interface Props { meta: WpMeta; content: string }
+const { meta, content } = Astro.props;
+const lang = /lang="([^"]+)"/.exec(meta.htmlAttrs)?.[1] ?? 'nl-NL';
+const body = withBase(meta.wrapperOpen + header(meta) + content + footer(meta) + meta.afterFooter);
+---
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title set:html={meta.title} />
+    <Fragment set:html={withBase(meta.head)} />
+  </head>
+  <body class={meta.bodyClass}>
+    <Fragment set:html={body} />
+  </body>
+</html>

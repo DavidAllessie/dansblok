@@ -1,0 +1,24 @@
+{
+  "name": "dansblok",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "import": "python3 scripts/import-wordpress.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidAllessie/dansblok.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidAllessie/dansblok/issues"
+  },
+  "homepage": "https://github.com/DavidAllessie/dansblok#readme",
+  "dependencies": {
+    "astro": "^5.18.2",
+    "node-html-parser": "^9.0.7"
+  },
+  "private": true,
+  "type": "module"
+}

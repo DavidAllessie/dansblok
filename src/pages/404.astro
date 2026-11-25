@@ -1,0 +1,6 @@
+---
+import WpPage from '../components/WpPage.astro';
+import { allPages } from '../lib/wp';
+const page = allPages().find(({ meta }) => meta.path === '/404/')!;
+---
+<WpPage meta={page.meta} content={page.content} />
